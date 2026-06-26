@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Build output (committed for actions normally, but keep clean during dev)
+# dist/        # NOTE: GitHub Actions need dist committed; uncomment to ignore during early dev
+
+# Env / secrets
+.env
+.env.*
+*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Test / coverage
+coverage/
+.vitest/
+
+# Temp
+*.tmp
+tmp/
+
+# graphify — regenerable artifacts (graph.json + reports are kept; these are not)
+graphify-out/cache/
+graphify-out/graph.html
+graphify-out/*.html

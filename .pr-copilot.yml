@@ -1,0 +1,35 @@
+# PR Review Copilot configuration
+# Place this file at the root of your repository. All fields are optional;
+# the values below are the defaults.
+
+# LLM model to use. V1 targets Google Gemini. (Claude / OpenAI models land in a later version.)
+model: gemini-2.0-flash
+
+# Which review dimensions to run.
+checks:
+  security: true
+  test_coverage: true
+  code_quality: true
+
+# Only post findings at or above this severity.
+# One of: info | medium | high | critical
+severity_threshold: medium
+
+# Fail the check if coverage drops more than this many percent (negative = allowed drop).
+min_coverage_delta: -5
+
+# Languages to review. Files with other extensions are skipped.
+languages:
+  - typescript
+  - javascript
+
+# Glob patterns to exclude from review.
+ignore_paths:
+  - "**/*.test.ts"
+  - "**/*.spec.ts"
+  - "**/dist/**"
+  - "**/node_modules/**"
+  - "migrations/**"
+
+# Maximum number of inline comments to post per PR (summary is always posted).
+max_comments: 20

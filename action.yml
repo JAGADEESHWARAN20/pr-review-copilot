@@ -1,0 +1,33 @@
+name: "PR Review Copilot"
+description: "AI-native PR reviewer — flags security, quality, and coverage issues and posts a summary on every pull request."
+author: "Jagadeeshwaran P"
+branding:
+  icon: "git-pull-request"
+  color: "purple"
+
+inputs:
+  github-token:
+    description: "GitHub token used to read the PR diff and post the review comment. Use ${{ secrets.GITHUB_TOKEN }}."
+    required: true
+    default: ${{ github.token }}
+  gemini-api-key:
+    description: "Google Gemini API key (set as a repository secret)."
+    required: false
+  llm-provider:
+    description: "LLM provider to use: gemini (default). openai/anthropic added in later versions."
+    required: false
+    default: "gemini"
+  config-path:
+    description: "Path to the .pr-copilot.yml config file, relative to repo root."
+    required: false
+    default: ".pr-copilot.yml"
+
+outputs:
+  risk-score:
+    description: "Computed risk score (0-10) for the PR."
+  recommendation:
+    description: "Recommended action: approve | review_required | request_changes."
+
+runs:
+  using: "node20"
+  main: "dist/index.js"
