@@ -9,8 +9,14 @@
  * untested async function) so you can verify the model + prompt end-to-end.
  * The rendered summary comment is printed to stdout — nothing is posted.
  */
-import { readFileSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
 import { DEFAULT_CONFIG } from "./config/schema.js";
+
+// Load local secrets from a .env file (gitignored) if present, so you can keep
+// your key in a file instead of exporting it every shell session.
+if (existsSync(".env")) {
+  process.loadEnvFile(".env");
+}
 import { loadConfig } from "./config/load-config.js";
 import { createProvider } from "./llm/factory.js";
 import { runReview } from "./review/run-review.js";
