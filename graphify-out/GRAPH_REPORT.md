@@ -1,16 +1,16 @@
 # Graph Report - PR REVIEW COPILET  (2026-06-26)
 
 ## Corpus Check
-- 29 files · ~10,454 words
+- 29 files · ~10,656 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 203 nodes · 297 edges · 13 communities (11 shown, 2 thin omitted)
+- 204 nodes · 299 edges · 13 communities (11 shown, 2 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `0f52497b`
+- Built from commit: `d83aa66b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -41,16 +41,16 @@
 10. `Architecture & Context` - 6 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `main()` --calls--> `loadConfig()`  [EXTRACTED]
-  src/index.ts → src/config/load-config.ts
 - `main()` --calls--> `runReview()`  [EXTRACTED]
   src/dry-run.ts → src/review/run-review.ts
-- `main()` --calls--> `createProvider()`  [EXTRACTED]
-  src/index.ts → src/llm/factory.ts
 - `main()` --calls--> `runReview()`  [EXTRACTED]
   src/index.ts → src/review/run-review.ts
 - `main()` --calls--> `loadConfig()`  [EXTRACTED]
   src/dry-run.ts → src/config/load-config.ts
+- `main()` --calls--> `loadConfig()`  [EXTRACTED]
+  src/index.ts → src/config/load-config.ts
+- `main()` --calls--> `createProvider()`  [EXTRACTED]
+  src/dry-run.ts → src/llm/factory.ts
 
 ## Import Cycles
 - None detected.
@@ -58,8 +58,8 @@
 ## Communities (13 total, 2 thin omitted)
 
 ### Community 0 - "Community 0"
-Cohesion: 0.11
-Nodes (24): buildSystemPrompt(), buildUserPrompt(), renderDiff(), truncate(), assessRisk(), RECOMMENDATION_LABEL, renderCategoryTable(), renderSummaryComment() (+16 more)
+Cohesion: 0.12
+Nodes (24): ChangedFile, buildSystemPrompt(), buildUserPrompt(), renderDiff(), truncate(), assessRisk(), RECOMMENDATION_LABEL, renderCategoryTable() (+16 more)
 
 ### Community 1 - "Community 1"
 Cohesion: 0.07
@@ -74,20 +74,20 @@ Cohesion: 0.09
 Nodes (22): compilerOptions, declaration, esModuleInterop, exactOptionalPropertyTypes, forceConsistentCasingInFileNames, isolatedModules, lib, module (+14 more)
 
 ### Community 4 - "Community 4"
-Cohesion: 0.18
-Nodes (14): extensionsFor(), getChangedFiles(), isFileInScope(), LANGUAGE_EXTENSIONS, Octokit, escapeRegExpChar(), globToRegExp(), minimatch() (+6 more)
+Cohesion: 0.31
+Nodes (7): extensionsFor(), isFileInScope(), LANGUAGE_EXTENSIONS, Octokit, escapeRegExpChar(), globToRegExp(), minimatch()
 
 ### Community 5 - "Community 5"
-Cohesion: 0.21
-Nodes (11): ProviderName, GeminiProvider, parseReviewResponse(), stripCodeFence(), ProviderOptions, ReviewProvider, ReviewRequest, RetryOptions (+3 more)
+Cohesion: 0.20
+Nodes (12): enrichGeminiError(), GeminiProvider, parseReviewResponse(), stripCodeFence(), ProviderOptions, ReviewProvider, ReviewRequest, RetryOptions (+4 more)
 
 ### Community 6 - "Community 6"
 Cohesion: 0.13
 Nodes (14): (advanced), 🟡 ARCHITECTURAL TRANSFORMATIONS (Significant Impact), C1: [Title] - [Severity: BLOCKER], Code Review: [PR Title / Feature Name], 🎯 CONTEXT ASSESSMENT, 🔴 CRITICAL FINDINGS (Must Fix Before Merge), Key Improvements Made:, 🎓 MENTORSHIP INSIGHT (+6 more)
 
 ### Community 7 - "Community 7"
-Cohesion: 0.27
-Nodes (9): loadConfig(), tmpFiles, Config, configSchema, DEFAULT_CONFIG, createProvider(), main(), parseFilesArg() (+1 more)
+Cohesion: 0.17
+Nodes (16): loadConfig(), tmpFiles, Config, configSchema, DEFAULT_CONFIG, getChangedFiles(), findExistingComment(), Octokit (+8 more)
 
 ### Community 8 - "Community 8"
 Cohesion: 0.22
@@ -108,7 +108,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **What connects `PreToolUse`, `name`, `version` to the rest of the system?**
   _103 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
-  _Cohesion score 0.11491935483870967 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.11553030303030302 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**

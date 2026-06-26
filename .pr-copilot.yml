@@ -3,7 +3,9 @@
 # the values below are the defaults.
 
 # LLM model to use. V1 targets Google Gemini. (Claude / OpenAI models land in a later version.)
-model: gemini-2.0-flash
+# Other valid options for your key include: gemini-2.5-flash-lite (cheaper),
+# gemini-3.5-flash (newest), or gemini-flash-latest (always-latest alias).
+model: gemini-2.5-flash
 
 # Which review dimensions to run.
 checks:

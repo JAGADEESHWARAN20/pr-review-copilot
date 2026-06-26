@@ -20,8 +20,8 @@
     "semantic_hash": ""
   },
   "src/config/schema.ts": {
-    "mtime": 1782437416.5002427,
-    "ast_hash": "12649adb9f6fc54aca51d649e6e971c4",
+    "mtime": 1782440704.3642547,
+    "ast_hash": "3831a81e4d8b93d1195a4383e7a35262",
     "semantic_hash": ""
   },
   "src/dry-run.ts": {
@@ -70,8 +70,8 @@
     "semantic_hash": ""
   },
   "src/llm/gemini.ts": {
-    "mtime": 1782438111.2335823,
-    "ast_hash": "048c8c7ddb079cfc0002b6f73c2bb389",
+    "mtime": 1782440470.9646456,
+    "ast_hash": "5fa771311b7909a8d11d1d381c699e6f",
     "semantic_hash": ""
   },
   "src/llm/provider.ts": {
@@ -90,8 +90,8 @@
     "semantic_hash": ""
   },
   "src/review/risk.test.ts": {
-    "mtime": 1782438602.092775,
-    "ast_hash": "889e09712df6cf119edc8853204d8aa0",
+    "mtime": 1782440705.3700325,
+    "ast_hash": "97022f1ccc82725dbc498c8bf0ba6e6b",
     "semantic_hash": ""
   },
   "src/review/risk.ts": {
@@ -125,8 +125,8 @@
     "semantic_hash": ""
   },
   ".pr-copilot.yml": {
-    "mtime": 1782437379.9046853,
-    "ast_hash": "392676d690c50262c70463d6768a1ac3",
+    "mtime": 1782440710.1782455,
+    "ast_hash": "12ae5e6854643912d44bd0e4d92f93f4",
     "semantic_hash": ""
   },
   "ARCHITECTURE.md": {
@@ -145,8 +145,8 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1782438941.308242,
-    "ast_hash": "db6d0668f3c4053a9c489f1c90f8d9e3",
+    "mtime": 1782440714.042231,
+    "ast_hash": "eb9ed920bf3b38a90590e18891be4e10",
     "semantic_hash": ""
   },
   "action.yml": {

@@ -7,7 +7,7 @@ import { severitySchema } from "../schemas/index.js";
  * fully-populated, validated Config object.
  */
 export const configSchema = z.object({
-  model: z.string().min(1).default("gemini-2.0-flash"),
+  model: z.string().min(1).default("gemini-2.5-flash"),
   checks: z
     .object({
       security: z.boolean().default(true),

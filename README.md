@@ -61,7 +61,7 @@ The pipeline is **provider-agnostic**: swapping the LLM is a one-line change in 
 Drop this at your repo root (all fields optional; defaults shown):
 
 ```yaml
-model: gemini-2.0-flash
+model: gemini-2.5-flash
 checks:
   security: true
   test_coverage: true

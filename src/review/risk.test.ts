@@ -46,12 +46,12 @@ describe("renderSummaryComment", () => {
       findings,
       summary: "Risky change.",
       risk: assessRisk(findings),
-      model: "gemini-2.0-flash",
+      model: "gemini-2.5-flash",
     });
     expect(md).toContain("PR Review Copilot");
     expect(md).toContain("Risk Score:");
     expect(md).toContain("Hardcoded secret");
-    expect(md).toContain("gemini-2.0-flash");
+    expect(md).toContain("gemini-2.5-flash");
   });
 
   it("celebrates a clean diff", () => {
@@ -59,7 +59,7 @@ describe("renderSummaryComment", () => {
       findings: [],
       summary: "",
       risk: assessRisk([]),
-      model: "gemini-2.0-flash",
+      model: "gemini-2.5-flash",
     });
     expect(md).toContain("No issues found");
   });

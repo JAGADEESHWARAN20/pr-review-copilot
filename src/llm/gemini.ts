@@ -34,34 +34,39 @@ export class GeminiProvider implements ReviewProvider {
   }
 
   async review(input: ReviewRequest): Promise<ReviewResponse> {
-    const text = await withRetry(
-      async () => {
-        const res = await this.client.models.generateContent({
-          model: this.model,
-          contents: input.userPrompt,
-          config: {
-            systemInstruction: input.systemPrompt,
-            responseMimeType: "application/json",
-            temperature: 0.1,
-          },
-        });
-        const out = res.text;
-        if (!out) {
-          throw new Error("Gemini returned an empty response.");
-        }
-        return out;
-      },
-      {
-        maxRetries: this.maxRetries,
-        isRetryable: isRetryableGeminiError,
-        onRetry: (attempt, delay) => {
-          // eslint-disable-next-line no-console
-          console.warn(
-            `Gemini call failed (attempt ${attempt}); retrying in ${delay}ms…`,
-          );
+    let text: string;
+    try {
+      text = await withRetry(
+        async () => {
+          const res = await this.client.models.generateContent({
+            model: this.model,
+            contents: input.userPrompt,
+            config: {
+              systemInstruction: input.systemPrompt,
+              responseMimeType: "application/json",
+              temperature: 0.1,
+            },
+          });
+          const out = res.text;
+          if (!out) {
+            throw new Error("Gemini returned an empty response.");
+          }
+          return out;
         },
-      },
-    );
+        {
+          maxRetries: this.maxRetries,
+          isRetryable: isRetryableGeminiError,
+          onRetry: (attempt, delay) => {
+            // eslint-disable-next-line no-console
+            console.warn(
+              `Gemini call failed (attempt ${attempt}); retrying in ${delay}ms…`,
+            );
+          },
+        },
+      );
+    } catch (err) {
+      throw enrichGeminiError(err, this.model);
+    }
 
     return parseReviewResponse(text);
   }
@@ -93,6 +98,36 @@ function stripCodeFence(text: string): string {
   const trimmed = text.trim();
   const fence = /^```(?:json)?\s*([\s\S]*?)\s*```$/i.exec(trimmed);
   return fence ? fence[1]!.trim() : trimmed;
+}
+
+/**
+ * Turns raw Gemini SDK errors into actionable messages. Quota (429) errors in
+ * particular are confusing — a "limit: 0" free-tier response means the project
+ * has no free allowance for the model, not that the caller is going too fast.
+ */
+function enrichGeminiError(err: unknown, model: string): Error {
+  const msg = err instanceof Error ? err.message : String(err);
+
+  if (/\b429\b|RESOURCE_EXHAUSTED|quota/i.test(msg)) {
+    const zeroLimit = /limit:\s*0\b/.test(msg);
+    const hint = zeroLimit
+      ? `Your Gemini project has no free-tier quota for "${model}" (limit: 0). ` +
+        `Enable billing on the key's Google Cloud project, use a different model ` +
+        `(set "model:" in .pr-copilot.yml, e.g. gemini-1.5-flash), or create a new ` +
+        `key from a project that has free-tier access.`
+      : `Gemini rate limit / quota exceeded for "${model}". Wait for the quota ` +
+        `window to reset, slow down request volume, or enable billing for higher limits.`;
+    return new Error(`Gemini quota error (429): ${hint}\n\nOriginal: ${msg}`);
+  }
+
+  if (/\b(401|403)\b|API_KEY_INVALID|permission/i.test(msg)) {
+    return new Error(
+      `Gemini authentication failed. Check that gemini-api-key is a valid key ` +
+        `from https://aistudio.google.com/apikey.\n\nOriginal: ${msg}`,
+    );
+  }
+
+  return err instanceof Error ? err : new Error(msg);
 }
 
 function isRetryableGeminiError(err: unknown): boolean {
