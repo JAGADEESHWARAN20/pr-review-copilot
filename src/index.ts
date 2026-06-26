@@ -2,7 +2,7 @@ import * as core from "@actions/core";
 import * as github from "@actions/github";
 import { loadConfig } from "./config/load-config.js";
 import { getChangedFiles } from "./github/get-pr-diff.js";
-import { upsertSummaryComment } from "./github/post-review.js";
+import { upsertSummaryComment, postInlineReview } from "./github/post-review.js";
 import type { PullRequestContext } from "./github/types.js";
 import { createProvider, type ProviderName } from "./llm/factory.js";
 import { runReview } from "./review/run-review.js";
@@ -48,7 +48,21 @@ async function main(): Promise<void> {
     config,
     files,
     meta: { title: pr.title as string, body: (pr.body as string) ?? "" },
+    log: (msg) => core.info(msg),
   });
+
+  // Inline comments first (one-click suggestions on the exact lines), then the
+  // summary comment. Inline posting must never block the summary, so guard it.
+  if (result.findings.length > 0) {
+    try {
+      const inline = await postInlineReview(octokit, ctx, files, result.findings);
+      core.info(`Posted ${inline.posted} inline comment(s); ${inline.unplaced.length} in summary only.`);
+    } catch (err) {
+      core.warning(
+        `Could not post inline review comments (${err instanceof Error ? err.message : String(err)}). Summary will still be posted.`,
+      );
+    }
+  }
 
   await upsertSummaryComment(octokit, ctx, result.summaryMarkdown);
 

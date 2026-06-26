@@ -31,6 +31,33 @@
       "norm_label": "pretooluse"
     },
     {
+      "label": "settings.local.json",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L1",
+      "id": "claude_settings_local",
+      "community": 14,
+      "norm_label": "settings.local.json"
+    },
+    {
+      "label": "permissions",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L2",
+      "id": "claude_settings_local_permissions",
+      "community": 14,
+      "norm_label": "permissions"
+    },
+    {
+      "label": "allow",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L3",
+      "id": "claude_settings_local_permissions_allow",
+      "community": 14,
+      "norm_label": "allow"
+    },
+    {
       "label": "package.json",
       "file_type": "code",
       "source_file": "package.json",
@@ -301,6 +328,51 @@
       "norm_label": "vitest"
     },
     {
+      "label": "agents.ts",
+      "file_type": "code",
+      "source_file": "src/agents/agents.ts",
+      "source_location": "L1",
+      "id": "agents_agents",
+      "community": 0,
+      "norm_label": "agents.ts"
+    },
+    {
+      "label": "Agent",
+      "file_type": "code",
+      "source_file": "src/agents/agents.ts",
+      "source_location": "L9",
+      "id": "agents_agents_agent",
+      "community": 0,
+      "norm_label": "agent"
+    },
+    {
+      "label": "JSON_CONTRACT",
+      "file_type": "code",
+      "source_file": "src/agents/agents.ts",
+      "source_location": "L20",
+      "id": "agents_agents_json_contract",
+      "community": 0,
+      "norm_label": "json_contract"
+    },
+    {
+      "label": "AGENTS",
+      "file_type": "code",
+      "source_file": "src/agents/agents.ts",
+      "source_location": "L41",
+      "id": "agents_agents_agents",
+      "community": 0,
+      "norm_label": "agents"
+    },
+    {
+      "label": "buildAgentSystemPrompt()",
+      "file_type": "code",
+      "source_file": "src/agents/agents.ts",
+      "source_location": "L82",
+      "id": "agents_agents_buildagentsystemprompt",
+      "community": 0,
+      "norm_label": "buildagentsystemprompt()"
+    },
+    {
       "label": "load-config.test.ts",
       "file_type": "code",
       "source_file": "src/config/load-config.test.ts",
@@ -412,10 +484,46 @@
       "label": "parseFilesArg()",
       "file_type": "code",
       "source_file": "src/dry-run.ts",
-      "source_location": "L83",
+      "source_location": "L84",
       "id": "src_dry_run_parsefilesarg",
       "community": 7,
       "norm_label": "parsefilesarg()"
+    },
+    {
+      "label": "diff-position.test.ts",
+      "file_type": "code",
+      "source_file": "src/github/diff-position.test.ts",
+      "source_location": "L1",
+      "id": "github_diff_position_test",
+      "community": 4,
+      "norm_label": "diff-position.test.ts"
+    },
+    {
+      "label": "diff-position.ts",
+      "file_type": "code",
+      "source_file": "src/github/diff-position.ts",
+      "source_location": "L1",
+      "id": "github_diff_position",
+      "community": 4,
+      "norm_label": "diff-position.ts"
+    },
+    {
+      "label": "commentableLinesByFile()",
+      "file_type": "code",
+      "source_file": "src/github/diff-position.ts",
+      "source_location": "L9",
+      "id": "github_diff_position_commentablelinesbyfile",
+      "community": 4,
+      "norm_label": "commentablelinesbyfile()"
+    },
+    {
+      "label": "commentableLines()",
+      "file_type": "code",
+      "source_file": "src/github/diff-position.ts",
+      "source_location": "L20",
+      "id": "github_diff_position_commentablelines",
+      "community": 4,
+      "norm_label": "commentablelines()"
     },
     {
       "label": "get-pr-diff.ts",
@@ -468,7 +576,7 @@
       "source_file": "src/github/get-pr-diff.ts",
       "source_location": "L45",
       "id": "github_get_pr_diff_getchangedfiles",
-      "community": 7,
+      "community": 4,
       "norm_label": "getchangedfiles()"
     },
     {
@@ -477,7 +585,7 @@
       "source_file": "src/github/minimatch.test.ts",
       "source_location": "L1",
       "id": "github_minimatch_test",
-      "community": 4,
+      "community": 13,
       "norm_label": "minimatch.test.ts"
     },
     {
@@ -486,7 +594,7 @@
       "source_file": "src/github/minimatch.ts",
       "source_location": "L1",
       "id": "github_minimatch",
-      "community": 4,
+      "community": 13,
       "norm_label": "minimatch.ts"
     },
     {
@@ -495,7 +603,7 @@
       "source_file": "src/github/minimatch.ts",
       "source_location": "L12",
       "id": "github_minimatch_minimatch",
-      "community": 4,
+      "community": 13,
       "norm_label": "minimatch()"
     },
     {
@@ -504,7 +612,7 @@
       "source_file": "src/github/minimatch.ts",
       "source_location": "L18",
       "id": "github_minimatch_globtoregexp",
-      "community": 4,
+      "community": 13,
       "norm_label": "globtoregexp()"
     },
     {
@@ -513,7 +621,7 @@
       "source_file": "src/github/minimatch.ts",
       "source_location": "L48",
       "id": "github_minimatch_escaperegexpchar",
-      "community": 4,
+      "community": 13,
       "norm_label": "escaperegexpchar()"
     },
     {
@@ -522,35 +630,80 @@
       "source_file": "src/github/post-review.ts",
       "source_location": "L1",
       "id": "github_post_review",
-      "community": 7,
+      "community": 4,
       "norm_label": "post-review.ts"
     },
     {
       "label": "Octokit",
       "file_type": "code",
       "source_file": "src/github/post-review.ts",
-      "source_location": "L4",
+      "source_location": "L6",
       "id": "github_post_review_octokit",
-      "community": 7,
+      "community": 4,
       "norm_label": "octokit"
     },
     {
       "label": "upsertSummaryComment()",
       "file_type": "code",
       "source_file": "src/github/post-review.ts",
-      "source_location": "L19",
+      "source_location": "L21",
       "id": "github_post_review_upsertsummarycomment",
-      "community": 7,
+      "community": 4,
       "norm_label": "upsertsummarycomment()"
     },
     {
       "label": "findExistingComment()",
       "file_type": "code",
       "source_file": "src/github/post-review.ts",
-      "source_location": "L46",
+      "source_location": "L48",
       "id": "github_post_review_findexistingcomment",
-      "community": 7,
+      "community": 4,
       "norm_label": "findexistingcomment()"
+    },
+    {
+      "label": "SEVERITY_EMOJI",
+      "file_type": "code",
+      "source_file": "src/github/post-review.ts",
+      "source_location": "L63",
+      "id": "github_post_review_severity_emoji",
+      "community": 4,
+      "norm_label": "severity_emoji"
+    },
+    {
+      "label": "InlineReviewResult",
+      "file_type": "code",
+      "source_file": "src/github/post-review.ts",
+      "source_location": "L70",
+      "id": "github_post_review_inlinereviewresult",
+      "community": 0,
+      "norm_label": "inlinereviewresult"
+    },
+    {
+      "label": "postInlineReview()",
+      "file_type": "code",
+      "source_file": "src/github/post-review.ts",
+      "source_location": "L85",
+      "id": "github_post_review_postinlinereview",
+      "community": 4,
+      "norm_label": "postinlinereview()"
+    },
+    {
+      "label": "renderFindingBody()",
+      "file_type": "code",
+      "source_file": "src/github/post-review.ts",
+      "source_location": "L122",
+      "id": "github_post_review_renderfindingbody",
+      "community": 4,
+      "norm_label": "renderfindingbody()"
+    },
+    {
+      "label": "capitalize()",
+      "file_type": "code",
+      "source_file": "src/github/post-review.ts",
+      "source_location": "L138",
+      "id": "github_post_review_capitalize",
+      "community": 4,
+      "norm_label": "capitalize()"
     },
     {
       "label": "types.ts",
@@ -558,7 +711,7 @@
       "source_file": "src/github/types.ts",
       "source_location": "L1",
       "id": "github_types",
-      "community": 0,
+      "community": 4,
       "norm_label": "types.ts"
     },
     {
@@ -567,7 +720,7 @@
       "source_file": "src/github/types.ts",
       "source_location": "L2",
       "id": "github_types_changedfile",
-      "community": 0,
+      "community": 4,
       "norm_label": "changedfile"
     },
     {
@@ -576,7 +729,7 @@
       "source_file": "src/github/types.ts",
       "source_location": "L12",
       "id": "github_types_pullrequestcontext",
-      "community": 7,
+      "community": 4,
       "norm_label": "pullrequestcontext"
     },
     {
@@ -585,7 +738,7 @@
       "source_file": "src/index.ts",
       "source_location": "L1",
       "id": "src_index",
-      "community": 7,
+      "community": 4,
       "norm_label": "index.ts"
     },
     {
@@ -594,7 +747,7 @@
       "source_file": "src/index.ts",
       "source_location": "L11",
       "id": "src_index_main",
-      "community": 7,
+      "community": 4,
       "norm_label": "main()"
     },
     {
@@ -612,7 +765,7 @@
       "source_file": "src/llm/factory.ts",
       "source_location": "L4",
       "id": "llm_factory_providername",
-      "community": 7,
+      "community": 4,
       "norm_label": "providername"
     },
     {
@@ -673,7 +826,7 @@
       "label": "parseReviewResponse()",
       "file_type": "code",
       "source_file": "src/llm/gemini.ts",
-      "source_location": "L76",
+      "source_location": "L82",
       "id": "llm_gemini_parsereviewresponse",
       "community": 5,
       "norm_label": "parsereviewresponse()"
@@ -682,7 +835,7 @@
       "label": "stripCodeFence()",
       "file_type": "code",
       "source_file": "src/llm/gemini.ts",
-      "source_location": "L97",
+      "source_location": "L112",
       "id": "llm_gemini_stripcodefence",
       "community": 5,
       "norm_label": "stripcodefence()"
@@ -691,7 +844,7 @@
       "label": "enrichGeminiError()",
       "file_type": "code",
       "source_file": "src/llm/gemini.ts",
-      "source_location": "L108",
+      "source_location": "L123",
       "id": "llm_gemini_enrichgeminierror",
       "community": 5,
       "norm_label": "enrichgeminierror()"
@@ -700,7 +853,7 @@
       "label": "isRetryableGeminiError()",
       "file_type": "code",
       "source_file": "src/llm/gemini.ts",
-      "source_location": "L133",
+      "source_location": "L148",
       "id": "llm_gemini_isretryablegeminierror",
       "community": 5,
       "norm_label": "isretryablegeminierror()"
@@ -787,19 +940,10 @@
       "norm_label": "review-prompt.ts"
     },
     {
-      "label": "buildSystemPrompt()",
-      "file_type": "code",
-      "source_file": "src/prompts/review-prompt.ts",
-      "source_location": "L16",
-      "id": "prompts_review_prompt_buildsystemprompt",
-      "community": 0,
-      "norm_label": "buildsystemprompt()"
-    },
-    {
       "label": "buildUserPrompt()",
       "file_type": "code",
       "source_file": "src/prompts/review-prompt.ts",
-      "source_location": "L57",
+      "source_location": "L14",
       "id": "prompts_review_prompt_builduserprompt",
       "community": 0,
       "norm_label": "builduserprompt()"
@@ -808,7 +952,7 @@
       "label": "renderDiff()",
       "file_type": "code",
       "source_file": "src/prompts/review-prompt.ts",
-      "source_location": "L76",
+      "source_location": "L33",
       "id": "prompts_review_prompt_renderdiff",
       "community": 0,
       "norm_label": "renderdiff()"
@@ -817,10 +961,82 @@
       "label": "truncate()",
       "file_type": "code",
       "source_file": "src/prompts/review-prompt.ts",
-      "source_location": "L102",
+      "source_location": "L59",
       "id": "prompts_review_prompt_truncate",
       "community": 0,
       "norm_label": "truncate()"
+    },
+    {
+      "label": "merge.test.ts",
+      "file_type": "code",
+      "source_file": "src/review/merge.test.ts",
+      "source_location": "L1",
+      "id": "review_merge_test",
+      "community": 0,
+      "norm_label": "merge.test.ts"
+    },
+    {
+      "label": "f()",
+      "file_type": "code",
+      "source_file": "src/review/merge.test.ts",
+      "source_location": "L5",
+      "id": "review_merge_test_f",
+      "community": 0,
+      "norm_label": "f()"
+    },
+    {
+      "label": "merge.ts",
+      "file_type": "code",
+      "source_file": "src/review/merge.ts",
+      "source_location": "L1",
+      "id": "review_merge",
+      "community": 0,
+      "norm_label": "merge.ts"
+    },
+    {
+      "label": "mergeFindings()",
+      "file_type": "code",
+      "source_file": "src/review/merge.ts",
+      "source_location": "L11",
+      "id": "review_merge_mergefindings",
+      "community": 0,
+      "norm_label": "mergefindings()"
+    },
+    {
+      "label": "dedupeKey()",
+      "file_type": "code",
+      "source_file": "src/review/merge.ts",
+      "source_location": "L25",
+      "id": "review_merge_dedupekey",
+      "community": 0,
+      "norm_label": "dedupekey()"
+    },
+    {
+      "label": "normalizeTitle()",
+      "file_type": "code",
+      "source_file": "src/review/merge.ts",
+      "source_location": "L30",
+      "id": "review_merge_normalizetitle",
+      "community": 0,
+      "norm_label": "normalizetitle()"
+    },
+    {
+      "label": "isMoreSevere()",
+      "file_type": "code",
+      "source_file": "src/review/merge.ts",
+      "source_location": "L34",
+      "id": "review_merge_ismoresevere",
+      "community": 0,
+      "norm_label": "ismoresevere()"
+    },
+    {
+      "label": "bySeverityThenLocation()",
+      "file_type": "code",
+      "source_file": "src/review/merge.ts",
+      "source_location": "L38",
+      "id": "review_merge_byseveritythenlocation",
+      "community": 0,
+      "norm_label": "byseveritythenlocation()"
     },
     {
       "label": "risk.test.ts",
@@ -934,28 +1150,55 @@
       "label": "ReviewResult",
       "file_type": "code",
       "source_file": "src/review/run-review.ts",
-      "source_location": "L8",
+      "source_location": "L11",
       "id": "review_run_review_reviewresult",
       "community": 0,
       "norm_label": "reviewresult"
     },
     {
-      "label": "runReview()",
+      "label": "Logger",
       "file_type": "code",
       "source_file": "src/review/run-review.ts",
       "source_location": "L21",
+      "id": "review_run_review_logger",
+      "community": 0,
+      "norm_label": "logger"
+    },
+    {
+      "label": "runReview()",
+      "file_type": "code",
+      "source_file": "src/review/run-review.ts",
+      "source_location": "L31",
       "id": "review_run_review_runreview",
       "community": 0,
       "norm_label": "runreview()"
     },
     {
-      "label": "isCategoryEnabled()",
+      "label": "runAgent()",
       "file_type": "code",
       "source_file": "src/review/run-review.ts",
-      "source_location": "L71",
-      "id": "review_run_review_iscategoryenabled",
+      "source_location": "L93",
+      "id": "review_run_review_runagent",
       "community": 0,
-      "norm_label": "iscategoryenabled()"
+      "norm_label": "runagent()"
+    },
+    {
+      "label": "emptyResult()",
+      "file_type": "code",
+      "source_file": "src/review/run-review.ts",
+      "source_location": "L109",
+      "id": "review_run_review_emptyresult",
+      "community": 0,
+      "norm_label": "emptyresult()"
+    },
+    {
+      "label": "errMessage()",
+      "file_type": "code",
+      "source_file": "src/review/run-review.ts",
+      "source_location": "L119",
+      "id": "review_run_review_errmessage",
+      "community": 0,
+      "norm_label": "errmessage()"
     },
     {
       "label": "index.ts",
@@ -990,7 +1233,7 @@
       "source_file": "src/schemas/index.ts",
       "source_location": "L10",
       "id": "schemas_index_severityschema",
-      "community": 0,
+      "community": 7,
       "norm_label": "severityschema"
     },
     {
@@ -1012,10 +1255,19 @@
       "norm_label": "category"
     },
     {
+      "label": "lenientCategorySchema",
+      "file_type": "code",
+      "source_file": "src/schemas/index.ts",
+      "source_location": "L21",
+      "id": "schemas_index_lenientcategoryschema",
+      "community": 0,
+      "norm_label": "lenientcategoryschema"
+    },
+    {
       "label": "findingSchema",
       "file_type": "code",
       "source_file": "src/schemas/index.ts",
-      "source_location": "L19",
+      "source_location": "L34",
       "id": "schemas_index_findingschema",
       "community": 0,
       "norm_label": "findingschema"
@@ -1024,7 +1276,7 @@
       "label": "Finding",
       "file_type": "code",
       "source_file": "src/schemas/index.ts",
-      "source_location": "L31",
+      "source_location": "L46",
       "id": "schemas_index_finding",
       "community": 0,
       "norm_label": "finding"
@@ -1033,16 +1285,16 @@
       "label": "reviewResponseSchema",
       "file_type": "code",
       "source_file": "src/schemas/index.ts",
-      "source_location": "L34",
+      "source_location": "L49",
       "id": "schemas_index_reviewresponseschema",
-      "community": 5,
+      "community": 0,
       "norm_label": "reviewresponseschema"
     },
     {
       "label": "ReviewResponse",
       "file_type": "code",
       "source_file": "src/schemas/index.ts",
-      "source_location": "L39",
+      "source_location": "L54",
       "id": "schemas_index_reviewresponse",
       "community": 5,
       "norm_label": "reviewresponse"
@@ -1051,7 +1303,7 @@
       "label": "recommendationSchema",
       "file_type": "code",
       "source_file": "src/schemas/index.ts",
-      "source_location": "L41",
+      "source_location": "L56",
       "id": "schemas_index_recommendationschema",
       "community": 0,
       "norm_label": "recommendationschema"
@@ -1060,7 +1312,7 @@
       "label": "Recommendation",
       "file_type": "code",
       "source_file": "src/schemas/index.ts",
-      "source_location": "L46",
+      "source_location": "L61",
       "id": "schemas_index_recommendation",
       "community": 0,
       "norm_label": "recommendation"
@@ -1069,7 +1321,7 @@
       "label": "meetsThreshold()",
       "file_type": "code",
       "source_file": "src/schemas/index.ts",
-      "source_location": "L49",
+      "source_location": "L64",
       "id": "schemas_index_meetsthreshold",
       "community": 0,
       "norm_label": "meetsthreshold()"
@@ -1838,6 +2090,24 @@
       "id": "prd_pr_review_copilot_11_open_questions",
       "community": 2,
       "norm_label": "11. open questions"
+    },
+    {
+      "label": "buildSystemPrompt()",
+      "file_type": "code",
+      "source_file": "src/prompts/review-prompt.ts",
+      "source_location": "L16",
+      "community": 0,
+      "norm_label": "buildsystemprompt()",
+      "id": "prompts_review_prompt_buildsystemprompt"
+    },
+    {
+      "label": "isCategoryEnabled()",
+      "file_type": "code",
+      "source_file": "src/review/run-review.ts",
+      "source_location": "L71",
+      "community": 0,
+      "norm_label": "iscategoryenabled()",
+      "id": "review_run_review_iscategoryenabled"
     }
   ],
   "links": [
@@ -1860,6 +2130,26 @@
       "confidence_score": 1.0,
       "source": "claude_settings_hooks",
       "target": "claude_settings_hooks_pretooluse"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "claude_settings_local",
+      "target": "claude_settings_local_permissions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "claude_settings_local_permissions",
+      "target": "claude_settings_local_permissions_allow",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2150,6 +2440,134 @@
       "confidence_score": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_vitest"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agents/agents.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "agents_agents",
+      "target": "agents_agents_agent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agents/agents.ts",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "agents_agents",
+      "target": "agents_agents_agents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agents/agents.ts",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "agents_agents",
+      "target": "agents_agents_buildagentsystemprompt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agents/agents.ts",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "agents_agents",
+      "target": "agents_agents_json_contract",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agents/agents.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "agents_agents",
+      "target": "schemas_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agents/agents.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "agents_agents",
+      "target": "schemas_index_category",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/review/run-review.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "review_run_review",
+      "target": "agents_agents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agents/agents.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "agents_agents_agent",
+      "target": "schemas_index_category",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/review/run-review.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "review_run_review",
+      "target": "agents_agents_agent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/review/run-review.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "review_run_review",
+      "target": "agents_agents_agents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/review/run-review.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "review_run_review",
+      "target": "agents_agents_buildagentsystemprompt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/review/run-review.ts",
+      "source_location": "L99",
+      "weight": 1.0,
+      "source": "review_run_review_runagent",
+      "target": "agents_agents_buildagentsystemprompt",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -2605,6 +3023,114 @@
       "target": "src_dry_run_parsefilesarg"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/github/diff-position.test.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "github_diff_position_test",
+      "target": "github_diff_position",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/github/diff-position.test.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "github_diff_position_test",
+      "target": "github_diff_position_commentablelines",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/github/diff-position.ts",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "github_diff_position",
+      "target": "github_diff_position_commentablelines",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/github/diff-position.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "github_diff_position",
+      "target": "github_diff_position_commentablelinesbyfile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/github/diff-position.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "github_diff_position",
+      "target": "github_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/github/diff-position.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "github_diff_position",
+      "target": "github_types_changedfile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/github/post-review.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "github_post_review",
+      "target": "github_diff_position",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/github/diff-position.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "github_diff_position_commentablelinesbyfile",
+      "target": "github_diff_position_commentablelines",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/github/post-review.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "github_post_review",
+      "target": "github_diff_position_commentablelinesbyfile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/github/post-review.ts",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "github_post_review_postinlinereview",
+      "target": "github_diff_position_commentablelinesbyfile"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/github/get-pr-diff.ts",
@@ -2831,6 +3357,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/github/post-review.ts",
+      "source_location": "L138",
+      "weight": 1.0,
+      "source": "github_post_review",
+      "target": "github_post_review_capitalize",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/github/post-review.ts",
       "source_location": "L46",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -2841,11 +3377,51 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/github/post-review.ts",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "github_post_review",
+      "target": "github_post_review_inlinereviewresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/github/post-review.ts",
       "source_location": "L4",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "github_post_review",
       "target": "github_post_review_octokit"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/github/post-review.ts",
+      "source_location": "L85",
+      "weight": 1.0,
+      "source": "github_post_review",
+      "target": "github_post_review_postinlinereview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/github/post-review.ts",
+      "source_location": "L122",
+      "weight": 1.0,
+      "source": "github_post_review",
+      "target": "github_post_review_renderfindingbody",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/github/post-review.ts",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "github_post_review",
+      "target": "github_post_review_severity_emoji",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2875,9 +3451,53 @@
       "source_file": "src/github/post-review.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "source": "github_post_review",
+      "target": "github_types_changedfile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/github/post-review.ts",
+      "source_location": "L2",
+      "weight": 1.0,
       "confidence_score": 1.0,
       "source": "github_post_review",
       "target": "github_types_pullrequestcontext"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/github/post-review.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "github_post_review",
+      "target": "schemas_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/github/post-review.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "github_post_review",
+      "target": "schemas_index_finding",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/github/post-review.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "github_post_review",
+      "target": "schemas_index_severity",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -2922,6 +3542,61 @@
       "confidence_score": 1.0,
       "source": "src_index_main",
       "target": "github_post_review_upsertsummarycomment"
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "src/github/post-review.ts",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "github_post_review_inlinereviewresult",
+      "target": "schemas_index_finding",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/github/post-review.ts",
+      "source_location": "L99",
+      "weight": 1.0,
+      "source": "github_post_review_postinlinereview",
+      "target": "github_post_review_renderfindingbody",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/index.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_index",
+      "target": "github_post_review_postinlinereview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/index.ts",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "src_index_main",
+      "target": "github_post_review_postinlinereview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/github/post-review.ts",
+      "source_location": "L124",
+      "weight": 1.0,
+      "source": "github_post_review_renderfindingbody",
+      "target": "github_post_review_capitalize",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3199,9 +3874,9 @@
       "source_file": "src/llm/gemini.ts",
       "source_location": "L108",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "llm_gemini",
-      "target": "llm_gemini_enrichgeminierror",
-      "confidence_score": 1.0
+      "target": "llm_gemini_enrichgeminierror"
     },
     {
       "relation": "contains",
@@ -3327,6 +4002,17 @@
       "source_file": "src/llm/gemini.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "source": "llm_gemini",
+      "target": "schemas_index_findingschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm/gemini.ts",
+      "source_location": "L2",
+      "weight": 1.0,
       "confidence_score": 1.0,
       "source": "llm_gemini",
       "target": "schemas_index_reviewresponse"
@@ -3391,9 +4077,9 @@
       "source_file": "src/llm/gemini.ts",
       "source_location": "L68",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "llm_gemini_geminiprovider_review",
-      "target": "llm_gemini_enrichgeminierror",
-      "confidence_score": 1.0
+      "target": "llm_gemini_enrichgeminierror"
     },
     {
       "relation": "calls",
@@ -3617,28 +4303,6 @@
       "target": "prompts_review_prompt"
     },
     {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/review/run-review.ts",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "review_run_review",
-      "target": "prompts_review_prompt_buildsystemprompt"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/review/run-review.ts",
-      "source_location": "L45",
-      "weight": 1.0,
-      "source": "review_run_review_runreview",
-      "target": "prompts_review_prompt_buildsystemprompt"
-    },
-    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -3681,6 +4345,209 @@
       "weight": 1.0,
       "source": "review_run_review_runreview",
       "target": "prompts_review_prompt_builduserprompt"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/review/merge.test.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "review_merge_test",
+      "target": "review_merge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/review/merge.test.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "review_merge_test",
+      "target": "review_merge_mergefindings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/review/merge.test.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "review_merge_test",
+      "target": "review_merge_test_f",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/review/merge.test.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "review_merge_test",
+      "target": "schemas_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/review/merge.test.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "review_merge_test",
+      "target": "schemas_index_finding",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/review/merge.ts",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "review_merge",
+      "target": "review_merge_byseveritythenlocation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/review/merge.ts",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "review_merge",
+      "target": "review_merge_dedupekey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/review/merge.ts",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "review_merge",
+      "target": "review_merge_ismoresevere",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/review/merge.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "review_merge",
+      "target": "review_merge_mergefindings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/review/merge.ts",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "review_merge",
+      "target": "review_merge_normalizetitle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/review/merge.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "review_merge",
+      "target": "schemas_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/review/merge.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "review_merge",
+      "target": "schemas_index_finding",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/review/merge.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "review_merge",
+      "target": "schemas_index_severity_order",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/review/run-review.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "review_run_review",
+      "target": "review_merge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/review/merge.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "review_merge_mergefindings",
+      "target": "review_merge_dedupekey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/review/merge.ts",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "review_merge_mergefindings",
+      "target": "review_merge_ismoresevere",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/review/run-review.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "review_run_review",
+      "target": "review_merge_mergefindings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/review/run-review.ts",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "review_run_review_runreview",
+      "target": "review_merge_mergefindings"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/review/merge.ts",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "review_merge_dedupekey",
+      "target": "review_merge_normalizetitle",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -3941,6 +4808,17 @@
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
+      "source_file": "src/review/run-review.ts",
+      "source_location": "L110",
+      "weight": 1.0,
+      "source": "review_run_review_emptyresult",
+      "target": "review_risk_assessrisk",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/review/run-review.ts",
       "source_location": "L30",
@@ -3974,12 +4852,54 @@
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
+      "source_file": "src/review/run-review.ts",
+      "source_location": "L115",
+      "weight": 1.0,
+      "source": "review_run_review_emptyresult",
+      "target": "review_risk_rendersummarycomment",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/review/run-review.ts",
       "source_location": "L35",
       "weight": 1.0,
       "source": "review_run_review_runreview",
       "target": "review_risk_rendersummarycomment"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/review/run-review.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "review_run_review",
+      "target": "prompts_review_prompt_buildsystemprompt"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/review/run-review.ts",
+      "source_location": "L109",
+      "weight": 1.0,
+      "source": "review_run_review",
+      "target": "review_run_review_emptyresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/review/run-review.ts",
+      "source_location": "L119",
+      "weight": 1.0,
+      "source": "review_run_review",
+      "target": "review_run_review_errmessage",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3995,11 +4915,31 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/review/run-review.ts",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "review_run_review",
+      "target": "review_run_review_logger",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/review/run-review.ts",
       "source_location": "L8",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "review_run_review",
       "target": "review_run_review_reviewresult"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/review/run-review.ts",
+      "source_location": "L93",
+      "weight": 1.0,
+      "source": "review_run_review",
+      "target": "review_run_review_runagent",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -4021,6 +4961,17 @@
       "confidence_score": 1.0,
       "source": "review_run_review",
       "target": "schemas_index"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/review/run-review.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "review_run_review",
+      "target": "schemas_index_category",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -4054,6 +5005,28 @@
       "confidence_score": 1.0,
       "source": "review_run_review_reviewresult",
       "target": "schemas_index_finding"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/review/run-review.ts",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "review_run_review_runreview",
+      "target": "prompts_review_prompt_buildsystemprompt"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/review/run-review.ts",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "review_run_review_runreview",
+      "target": "review_run_review_emptyresult",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -4094,6 +5067,16 @@
       "confidence_score": 1.0,
       "source": "schemas_index",
       "target": "schemas_index_findingschema"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/schemas/index.ts",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "schemas_index",
+      "target": "schemas_index_lenientcategoryschema",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -4957,5 +5940,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "d83aa66bbdc648028af1af356768795a2d9bc58a"
+  "built_at_commit": "77ebd05f7dda7fc94e11fb09f53be6040e9da6f0"
 }

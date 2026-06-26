@@ -1,6 +1,6 @@
 import { GoogleGenAI } from "@google/genai";
 import {
-  reviewResponseSchema,
+  findingSchema,
   type ReviewResponse,
 } from "../schemas/index.js";
 import { withRetry } from "./retry.js";
@@ -72,7 +72,13 @@ export class GeminiProvider implements ReviewProvider {
   }
 }
 
-/** Parses model text into a validated ReviewResponse, tolerating code fences. */
+/**
+ * Parses model text into a ReviewResponse, tolerating code fences.
+ *
+ * Findings are validated individually: a single malformed finding is dropped
+ * rather than discarding the entire (otherwise good) response. Only a top-level
+ * shape that isn't even an object/JSON is treated as a hard failure.
+ */
 export function parseReviewResponse(text: string): ReviewResponse {
   const cleaned = stripCodeFence(text);
   let json: unknown;
@@ -84,13 +90,22 @@ export function parseReviewResponse(text: string): ReviewResponse {
     );
   }
 
-  const result = reviewResponseSchema.safeParse(json);
-  if (!result.success) {
+  if (typeof json !== "object" || json === null) {
     throw new Error(
-      `LLM JSON did not match the expected schema: ${result.error.message}`,
+      `LLM JSON was not an object. First 200 chars: ${cleaned.slice(0, 200)}`,
     );
   }
-  return result.data;
+
+  const obj = json as { summary?: unknown; findings?: unknown };
+  const summary = typeof obj.summary === "string" ? obj.summary : "";
+  const rawFindings = Array.isArray(obj.findings) ? obj.findings : [];
+
+  const findings = rawFindings.flatMap((rf) => {
+    const r = findingSchema.safeParse(rf);
+    return r.success ? [r.data] : [];
+  });
+
+  return { summary, findings };
 }
 
 /** Strips a leading/trailing ```json … ``` fence if the model added one. */

@@ -71,6 +71,7 @@ async function main(): Promise<void> {
     config,
     files,
     meta: { title: "Dry-run sample PR", body: "Local pipeline test." },
+    log: (msg) => console.error(`[pipeline] ${msg}`),
   });
 
   console.log(result.summaryMarkdown);

@@ -13,11 +13,26 @@ export const categorySchema = z.enum(["security", "quality", "coverage"]);
 export type Category = z.infer<typeof categorySchema>;
 
 /**
+ * Lenient category used when parsing LLM output. Models often put an issue label
+ * (e.g. "Hardcoded Secret") in the category field; rather than reject the whole
+ * finding, we normalize obvious variants and fall back to "quality". In the
+ * multi-agent flow the category is force-tagged afterward anyway.
+ */
+const lenientCategorySchema = z.preprocess((v) => {
+  if (typeof v !== "string") return "quality";
+  const s = v.toLowerCase();
+  if (s.includes("secur") || s.includes("vuln") || s.includes("secret")) return "security";
+  if (s.includes("cover") || s.includes("test")) return "coverage";
+  if (s === "security" || s === "quality" || s === "coverage") return s;
+  return "quality";
+}, categorySchema);
+
+/**
  * A single issue found by an LLM agent. The LLM is asked to return objects
  * matching this shape; anything that fails validation is dropped (never posted).
  */
 export const findingSchema = z.object({
-  category: categorySchema,
+  category: lenientCategorySchema,
   severity: severitySchema,
   file: z.string().min(1),
   /** 1-based line in the new version of the file, when known. */

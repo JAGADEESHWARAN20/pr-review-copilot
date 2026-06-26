@@ -4,7 +4,7 @@ An AI-native **GitHub Action** that reviews pull requests the moment they're ope
 
 > A developer, for developers — save 30–90 minutes of manual review time on every PR.
 
-**Status:** V1 (Phase 1 MVP) — single combined security + quality review, summary comment, configurable via `.pr-copilot.yml`. Powered by **Google Gemini** (Claude / OpenAI providers land in a later version).
+**Status:** V2 — **multi-agent** review (parallel Security / Quality / Coverage agents) + a deterministic secret pre-scan, **inline review comments** with one-click `suggestion` blocks, plus the summary comment. Configurable via `.pr-copilot.yml`. Powered by **Google Gemini** (Claude / OpenAI providers land in a later version).
 
 ---
 
@@ -121,9 +121,9 @@ See [`ARCHITECTURE.md`](./ARCHITECTURE.md) for the design and the roadmap to mul
 
 ## Roadmap
 
-- **V1 (now):** Combined review + summary comment. Gemini. ✅
-- **V2:** Parallel Security / Quality / Coverage agents, inline suggestion comments, secret pre-scan (gitleaks), Claude/OpenAI providers.
-- **V3:** Coverage delta from `coverage.json`, Python + Go support, GitHub Marketplace listing.
+- **V1:** Combined review + summary comment. Gemini. ✅
+- **V2 (now):** Parallel Security / Quality / Coverage agents, deterministic secret pre-scan, inline one-click suggestion comments. ✅
+- **V3:** Coverage delta from `coverage.json`, Python + Go support, Claude/OpenAI providers, GitHub Marketplace listing.
 
 ---
 

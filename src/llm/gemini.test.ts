@@ -41,11 +41,28 @@ describe("parseReviewResponse", () => {
     );
   });
 
-  it("throws when a finding has an invalid severity", () => {
+  it("drops a malformed finding but keeps the valid ones", () => {
     const text = JSON.stringify({
       summary: "s",
-      findings: [{ category: "security", severity: "boom", file: "a.ts", title: "t", description: "d" }],
+      findings: [
+        { category: "security", severity: "boom", file: "a.ts", title: "t", description: "d" }, // bad severity
+        { category: "security", severity: "high", file: "a.ts", line: 2, title: "ok", description: "d" },
+      ],
     });
-    expect(() => parseReviewResponse(text)).toThrow(/did not match the expected schema/);
+    const out = parseReviewResponse(text);
+    expect(out.findings).toHaveLength(1);
+    expect(out.findings[0]!.title).toBe("ok");
+  });
+
+  it("normalizes a non-enum category instead of rejecting the finding", () => {
+    const text = JSON.stringify({
+      summary: "s",
+      findings: [
+        { category: "Hardcoded Secret", severity: "critical", file: "a.ts", line: 1, title: "secret", description: "d" },
+      ],
+    });
+    const out = parseReviewResponse(text);
+    expect(out.findings).toHaveLength(1);
+    expect(out.findings[0]!.category).toBe("security");
   });
 });
